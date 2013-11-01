@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h1>Welcome to katzly.</h1>
-	<form name="input" action="" method="get">
+	<form name="input" action="{{ url_for('shortened') }}" method="post">
 		Enter the URL to shorten: <input type="text" name="url">
 		<input type="submit" value="Submit">
 	</form>

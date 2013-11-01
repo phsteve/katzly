@@ -1,1 +1,1 @@
-web: gunicorn katzly:app
+web: python katzly.py
