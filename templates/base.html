@@ -5,8 +5,11 @@
 </head>
 <body>
 	<h1>Welcome to katzly.</h1>
-	<form name="input" action="{{ url_for('shortened') }}" method="post">
-		Enter the URL to shorten: <input type="text" name="url">
+	<form name="input" action="{{ url_for('shortened') }}" method="post" >
+		{{ form.hidden_tag() }}
+		<!-- Enter the URL to shorten: <input type="text" name="url"> -->
+		Enter the URL to shorten: <!-- {{ form.csrf_token }} --> {{ form.url.label }}
+		{{ form.url(size=60) }}
 		<input type="submit" value="Submit">
 	</form>
 </body>
